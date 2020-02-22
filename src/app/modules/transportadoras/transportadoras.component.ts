@@ -4,11 +4,11 @@ import { Subscription } from "rxjs";
 import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
-  selector: "app-multi-cards",
-  templateUrl: "./multi-cards.component.html",
-  styleUrls: ["./multi-cards.component.scss"]
+  selector: "app-transportadoras",
+  templateUrl: "./transportadoras.component.html",
+  styleUrls: ["./transportadoras.component.scss"]
 })
-export class MultiCardsComponent implements OnInit, OnDestroy {
+export class TransportadorasComponent implements OnInit, OnDestroy {
   transportadoras: any[];
   pagina: number;
   inscricao: Subscription;

@@ -3,24 +3,14 @@ import { NgModule } from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { ComponentsGenericsModule } from "./components-generics/components-generics.module";
-import { SideBarModule } from "./modules/side-bar/side-bar.module";
-import { MultiCardsModule } from "./modules/multi-cards/multi-cards.module";
 import { TransportadoraService } from "./core/transportadora.service";
-import { RegisterModule } from "./modules/register/register.module";
-import { UpdateDeleteModule } from "./modules/update-delete/update-delete.module";
+import { HeaderComponent } from "./components-generics/header/header.component";
+import { FooterComponent } from "./components-generics/footer/footer.component";
+import { SideBarModule } from "./modules/side-bar/side-bar.module";
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [
-    RegisterModule,
-    UpdateDeleteModule,
-    MultiCardsModule,
-    SideBarModule,
-    ComponentsGenericsModule,
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, HeaderComponent, FooterComponent],
+  imports: [BrowserModule, AppRoutingModule, SideBarModule],
   providers: [TransportadoraService],
   bootstrap: [AppComponent]
 })
