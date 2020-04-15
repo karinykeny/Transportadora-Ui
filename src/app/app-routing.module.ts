@@ -1,19 +1,16 @@
+import { PageNotFoundComponent } from './transportadora/page-not-found/page-not-found.component';
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { AppComponent } from "./app.component";
+import { HomeComponent } from './transportadora/home/home.component';
+import { UpdateComponent } from './transportadora/update/update.component';
+import { RegisterComponent } from './transportadora/register/register.component';
 
 const routes: Routes = [
-  {
-    path: "transportadora",
-    loadChildren:
-      "app/modules/transportadoras/transportadoras.module#TransportadorasModule"
-  },
-  {
-    path: "cadastro-transportadora",
-    loadChildren: "app/modules/register/register.module#RegisterModule"
-  },
-  { path: "", redirectTo: "/home", pathMatch: "full" },
-  { path: "**", component: AppComponent }
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'cadastrar', component: RegisterComponent },
+  { path: 'atualizar-deletar-transportadora', component: UpdateComponent },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

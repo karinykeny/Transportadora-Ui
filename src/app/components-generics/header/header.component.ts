@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { RouterLinkActive } from "@angular/router";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-header",
@@ -7,5 +7,14 @@ import { RouterLinkActive } from "@angular/router";
   styleUrls: ["./header.component.scss"]
 })
 export class HeaderComponent {
-  constructor(private route: RouterLinkActive) {}
+
+  constructor(private _router: Router) {}
+
+  onSelectRegister(): void {
+    this._router.navigate(['/cadastrar']);
+  }
+
+  onSelectHome(): void {
+    this._router.navigate(['/home']);
+  }
 }

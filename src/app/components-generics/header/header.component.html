@@ -1,17 +1,14 @@
 <nav class="nav nav-pills nav-justified mt-3 header-font">
   <a
     class="nav-item nav-link transportadora p-0"
-    routerLinkActive="active"
-    routerLink="/transportadoras"
-    [queryParams]="{ pagina: 1 }"
+    (click)="onSelectHome()"
     >Transportadoras|</a
   >
   <div class="col-4">
     <a
-      class="nav-item nav-link active btn btn-success
+      #register class="nav-item nav-link active btn btn-success
     register mt-0"
-      routerLinkActive="active"
-      routerLink="/transportadora/cadastrar"
+      (click)="onSelectRegister()"
       >Cadastre sua transportadora</a
     >
   </div>

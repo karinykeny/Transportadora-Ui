@@ -1,16 +1,18 @@
+import { ComponentsGenericsModule } from './components-generics/components-generics.module';
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { TransportadoraService } from "./core/transportadora.service";
-import { HeaderComponent } from "./components-generics/header/header.component";
-import { FooterComponent } from "./components-generics/footer/footer.component";
-import { SideBarModule } from "./modules/side-bar/side-bar.module";
+import { HomeComponent } from './transportadora/home/home.component';
+import { RegisterComponent } from './transportadora/register/register.component';
+import { UpdateComponent } from './transportadora/update/update.component';
+import { PageNotFoundComponent } from './transportadora/page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent],
-  imports: [BrowserModule, AppRoutingModule, SideBarModule],
+  declarations: [AppComponent, HomeComponent, RegisterComponent, UpdateComponent, PageNotFoundComponent],
+  imports: [BrowserModule, AppRoutingModule, ComponentsGenericsModule],
   providers: [TransportadoraService],
   bootstrap: [AppComponent]
 })

@@ -1,3 +1,20 @@
 .content {
-  margin: 0px 15px 0px 15px;
+  margin: 0px 25px 0px 25px;
+}
+
+.body {
+  margin-left: 20px;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.row {
+  position: absolute;
+  top: 12%;
 }
