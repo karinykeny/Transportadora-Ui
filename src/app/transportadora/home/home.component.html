@@ -1,7 +1,20 @@
 <div>
-    <div class="card">
-        <div class="card-body">
-            This is some text within a card body.
+    <div class="card border-dark" *ngFor="let empresa of empresas">
+        <div class="card-body row">
+            <table>
+                <tr>
+                    <th rowspan="2">foto</th>
+                    <td>{{ empresa.nome }}</td>
+                    <td >{{ empresa.telefone }}</td>
+                    <td >empresa.zap</td>
+                </tr>
+                <tr>
+                    <td>{{ empresa.cnpj }}</td>
+                    <td>{{ empresa.email }}</td>
+                    <td></td>
+                </tr>
+            </table>
         </div>
+        <br>
     </div>
 </div>

@@ -7,11 +7,28 @@ export class TransportadoraService {
   constructor() {}
 
   getTransportadoras() {
-    return [
-      { id: 1, nome: "Turma da Mônica" },
-      { id: 2, nome: "Turma do Cebolinha" },
-      { id: 3, nome: "Turma do Pablo" }
-    ];
+    return [ {  id: 1,
+                nome: 'empresa da segunda', 
+                cnpj: '44.056.755/0001-83', 
+                telefone: '(81)99691-2471',
+                email: 'teste@teste.com.br',
+                zap: '(81)99999-9999'
+              },
+              { id: 2,
+                nome: 'empresa da terça', 
+                cnpj: '44.056.755/0001-83', 
+                telefone: '(81)99691-2471',
+                email: 'teste@teste.com.br',
+                zap: '(81)99999-9999'
+              },
+              { id: 3,
+                nome: 'empresa da quarta', 
+                cnpj: '44.056.755/0001-83', 
+                telefone: '(81)99691-2471',
+                email: 'teste@teste.com.br',
+                zap: '(81)99999-9999'
+              }
+            ]; 
   }
 
   getTransportadora(id: number) {

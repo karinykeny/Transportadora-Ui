@@ -1,3 +1,4 @@
+import { TransportadoraService } from './../../core/transportadora.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  empresas: any = {};
+
+  constructor(private trasService: TransportadoraService) { }
 
   ngOnInit(): void {
+    this.empresas = this.trasService.getTransportadoras()
   }
 
 }
